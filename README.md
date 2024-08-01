@@ -14,7 +14,7 @@ Additional Libraries: Lombok,
 
 Features:
 
-• Performed integration testing to evaluate the seamless integration of various modules within the application.
+• Performed integration testing to evaluate the seamless integration of various modules within the application.\n
 • Implemented data validation using Spring Validator for enhanced data integrity .
 • Managed custom and global exceptions to ensure robust error handling.
 • Developed RESTful Web Services using Spring Boot to integrate multiple systems and streamline data flows.
