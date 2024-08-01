@@ -30,7 +30,7 @@ public class CategoryController
     @PostMapping("/")
     public ResponseEntity<CategoryDto> createCategory( @Valid  @RequestBody CategoryDto categoryDto)
     {
-        CategoryDto categories =this.categoryService.createCategory(categoryDto);
+        CategoryDto categories = categoryService.createCategory(categoryDto);
         return new ResponseEntity<CategoryDto>(categories , HttpStatus.CREATED);
 
     }
@@ -38,28 +38,28 @@ public class CategoryController
     @PutMapping("/{categoryId}")
     public ResponseEntity<CategoryDto> updateCategory( @Valid  @RequestBody CategoryDto categoryDto ,@PathVariable Integer categoryId)
     {
-        CategoryDto categories = this.categoryService.updateCategory(categoryDto, categoryId);
+        CategoryDto categories = categoryService.updateCategory(categoryDto, categoryId);
         return new ResponseEntity<CategoryDto>(categories , HttpStatus.OK );
     }
     //delete
     @DeleteMapping("/{categoryId}")
     public ResponseEntity<ApiResponse> deleteCategory(@PathVariable Integer categoryId)
     {
-        this.categoryService.deleteCategory(categoryId);
+        categoryService.deleteCategory(categoryId);
         return new ResponseEntity<ApiResponse>(new ApiResponse("Categories deleted successfully" , true), HttpStatus.OK);
     }
     //get
     @GetMapping("/{categoryId}")
     public ResponseEntity<CategoryDto> getCategory(@PathVariable Integer categoryId)
     {
-        CategoryDto category = this.categoryService.getCategory(categoryId);
+        CategoryDto category = categoryService.getCategory(categoryId);
         return new ResponseEntity<CategoryDto>(category , HttpStatus.OK);
     }
     //get all
     @GetMapping("/")
     public ResponseEntity<List<CategoryDto>>  getCategories()
     {
-        List<CategoryDto> categories = this.categoryService.getAllCategory();
+        List<CategoryDto> categories = categoryService.getAllCategory();
         return  ResponseEntity.ok(categories );
     }
 }

@@ -26,7 +26,7 @@ public class Post
     private Integer postId;
     @Column(name="post_title",length=100,nullable= false)
     private String title;
-    @Column(length=100)
+    @Column(length=500)
     private String content;
     private String imageName;
     private Date addedDate;
