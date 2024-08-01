@@ -2,6 +2,7 @@ package com.ITCornner.it_cornner.repositories;
 
 import java.util.List;
 
+import com.ITCornner.it_cornner.entities.Category;
 import com.ITCornner.it_cornner.entities.Post;
 import com.ITCornner.it_cornner.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;

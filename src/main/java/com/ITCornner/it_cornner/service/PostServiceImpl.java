@@ -1,9 +1,11 @@
 package com.ITCornner.it_cornner.service;
 
 import com.ITCornner.it_cornner.dto.PostDto;
+import com.ITCornner.it_cornner.entities.Category;
 import com.ITCornner.it_cornner.entities.Post;
 import com.ITCornner.it_cornner.entities.User;
 import com.ITCornner.it_cornner.exception.ResourceNotFoundException;
+import com.ITCornner.it_cornner.repositories.CategoryRepo;
 import com.ITCornner.it_cornner.repositories.PostRepo;
 import com.ITCornner.it_cornner.repositories.UserRepo;
 import org.modelmapper.ModelMapper;
