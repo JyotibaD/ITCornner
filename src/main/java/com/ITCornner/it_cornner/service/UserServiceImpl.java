@@ -2,11 +2,14 @@ package com.ITCornner.it_cornner.service;
 
 import com.ITCornner.it_cornner.dto.UserDto;
 import com.ITCornner.it_cornner.entities.User;
+import com.ITCornner.it_cornner.exception.ResourceNotFoundException;
 import com.ITCornner.it_cornner.repositories.UserRepo;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class UserServiceImpl implements UserService
